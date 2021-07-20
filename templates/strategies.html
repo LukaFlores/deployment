@@ -1,0 +1,12 @@
+{%extends "layout.html"%}
+{% block content %}
+
+<h1>Strategies</h1>
+<table class="ui selectable inverted table">
+    {% for strategy in strategies %}
+    <tr onclick="window.location='/strategy/{{strategy.id}}'">
+        <td>{{ strategy.name.replace("_", " ").title() }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

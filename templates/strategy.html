@@ -1,0 +1,24 @@
+{%extends "layout.html"%}
+{% block content %}
+    <h2><a href="/">Stocks <i class="angle double right icon"></i> </a>{{strategy.name}}</h2>
+
+    <table class="ui selectable inverted table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>    
+                <td>{{stock.symbol}}</td>
+                <td>{{stock.name}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
